@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+
+.email-text{
+    height: 50px;
+    width: 300px;
+    margin: 0;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+   outline: none;
+}
+
+
+.email-text::placeholder{
+    font-size: 14px;
+    text-align: left;
+    padding-left: 10px  ;
+    font-family: monospace;
+}
+
+.email-submit{
+    height: 51px;
+    background-color: darkviolet;
+    border: none;
+    width: 150px;
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 0px 15px 15px 0px;
+    font-weight: bold;
+outline: none;
+    font-family: sans-serif;
+}
+
+
+.email-submit:hover{
+
+    filter: grayscale(.2);
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
