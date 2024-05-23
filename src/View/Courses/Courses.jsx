@@ -5,6 +5,7 @@ import parse from 'html-react-parser';
 import Course from "../../Components/Courses/Course";
 import '../../global.css';
 import {useInView} from "react-intersection-observer";
+import AboutInfo from "../AboutInfo/AboutInfo";
 
 
 
@@ -64,6 +65,7 @@ const Courses = () => {
         <section  className={style.courses} >
 
             <Line {...lineStyle}/>
+
              <Course  {...classicModule}    />
              <Course {...reactModule} />
              <Course {...eyePro}/>

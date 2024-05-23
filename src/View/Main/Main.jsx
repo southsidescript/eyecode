@@ -24,25 +24,31 @@ const Main = () =>{
 
 
    return(
+       <>
            <main className={style.main}>
-               <section className={style.sectionheader}>{preview.map(n=>n)} <span className={style.question}>{preview.length < 19?'|':'?'}</span></section>
+               <section className={style.sectionheader}>{preview.map(n => n)} <span
+                   className={style.question}>{preview.length < 19 ? '|' : '?'}</span></section>
                <Email placeholder={'Email address'}/>
-               <section className={style.maindesignelems}><img  src="./Fray.jpeg" alt=""/></section>
+               <section className={style.maindesignelems}><img src="./Fray.jpeg" alt=""/></section>
                <section className={style.cooperate}>
                    Мы соотрудничаем:
-                   <div className={style.main_logos}><img src="./logo_finam.png" alt=""/><img src="./reu.png" alt=""/> </div>
+                   <div className={style.main_logos}><img src="./logo_finam.png" alt=""/><img src="./reu.png" alt=""/>
+                   </div>
                </section>
                <About/>
                <Courses/>
                <Feedback/>
-               <Contacts/>
-               <Footer/>
 
 
-               
            </main>
 
-       )
+           <Contacts/>
+           <Footer/>
+       </>
+
+
+
+)
 }
 
 export default Main;

@@ -11,11 +11,6 @@ const consult = useContext(Context);
 const {consultWindowVisible ,setConsultWindowVisible} = consult;
 
 
-console.log(consultWindowVisible)
-
-
-
-
 
     return(<>
 

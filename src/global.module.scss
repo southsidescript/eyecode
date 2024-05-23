@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Martian+Mono:wght@100..800&display=swap');
 
+
+
 .header{
   height: 150px;
   width: 100vw;
@@ -570,22 +572,24 @@ background-position: center center;
 
 .feedbacks{
   display: flex;
+
 }
 
 
 
 .contacts {
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: flex-end;
-
+background:linear-gradient(black, #24292e);
 
 
   &_tme {
     width: 33%;
-
+    background:linear-gradient(black,#24292e);
+    border-radius: 25px;
     height: 90vh;
-    background-color: #0c0c0c;
     background-repeat: no-repeat;
     display: flex;
     text-transform: uppercase;
@@ -607,85 +611,49 @@ background-position: center center;
   }
 
     &_other {
+
       display: flex;
       flex-direction: column;
-
+      justify-content:flex-end;
+      align-items: center;
       width: 33%;
       height: 90vh;
       
-      &_instagram{
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(violet,orange);
-        filter: grayscale(.7);
-        transition: 1s all ease;
-
-
-        &:hover{
-          filter: grayscale(0);
-        }
-
-        &:hover img{
-           transform-style: preserve-3d;
-           transition:1s all ease;
-           transform: rotateY(360deg);
-
-        }
-
-      }
-
-      &_github{
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #0c0c0c;
-
-        &:hover img{
-          transform-style: preserve-3d;
-          transition: 1s all ease;
-          transform: rotateY(360deg);
-
-        }
-      }
-
-
-      &_discord{
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #131313;
 
 
 
 
-        &:hover img{
 
-          transition: 1s all ease;
-          transform: rotateY(360deg);
-          transform-style: preserve-3d;
-
-        }
-      }
 
       & img{
-        width: 150px;
-        height: 150px;
-
-
+        width: 50px;
+        height: 50px;
+        filter: grayscale(1);
+        transform-style: preserve-3d;
+        &:hover{
+          filter: grayscale(0);
+          cursor: pointer;
+          animation: circle 1s 1;
+          transition: all .2s  ease;
+        }
       }
 
 
-      & div {
-        width: 100%;
-        height: calc(100% / 3);
+     & div{
 
-      }
+         width: 100%;
+         height: calc(100% / 3);
+         display: flex;
+       justify-content: center;
+       align-items: center;
+     }
+
 
     }
+
+
+
+
 
 
     &_email {
@@ -754,9 +722,175 @@ background-position: center center;
 
 
 
+.about_info{
+  width: 100vw;
+  display: flex;
+  z-index: 1000;
+  height: 100vh;
+  background:linear-gradient(black,#17181c) ;
+  justify-content: space-evenly;
 
 
 
+  &_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    background-color: #a20043;
+    color: white;
+    right: 50px;
+    bottom: 50px;
+    width: 120px;
+    font-size: 13px;
+    opacity: .3;
+    height: 50px;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 1;
+      transform: translateX(-10px);
+
+    }
+
+  }
+
+  &_button:before{
+    content: url(".././public/arrow_back.png");
+    position: absolute;
+    left: 10px;
+    top: 25%;
+
+  }
+
+  &_classic{
+
+    animation:apperance 1s 1;
+    width: 450px;
+    height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px gray;
+
+   &_main{
+     color: white;
+     display: flex;
+     align-items: flex-start;
+     flex-direction: column;
+     padding: 30px;
+     justify-content: flex-start;
+   }
+
+
+
+    &_header{
+      width: 100%;
+      height: 15vh;
+      border-radius: 15px 15px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: 700;
+     
+
+      font-family: "Jura", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      background: url(".././public/redeyes.jpeg");
+      background-size: cover;
+      filter: contrast(.5);
+     background-position: center center;
+    }
+
+  }
+
+  &_react{
+    animation:apperance 2s 1;
+    width: 450px;
+    height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px gray;
+
+
+    &_header{
+      width: 100%;
+      height: 15vh;
+      border-radius: 15px 15px 0 0;
+
+      background: url(".././public/blueeyes.jpeg");
+      background-size: cover;
+      filter: contrast(.5);
+      background-position: center center;
+    }
+  }
+
+  &_prof{
+    animation:apperance 3s 1;
+    width: 450px;
+    height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px gray;
+
+    &_header{
+      width: 100%;
+      height: 15vh;
+      border-radius: 15px 15px 0 0;
+
+      background: url(".././public/profeyes.jpeg");
+      background-size: cover;
+      filter: contrast(.5);
+      background-position: center center;
+    }
+  }
+}
+
+
+.about_line{
+
+  position: relative;
+  width: 2px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.49);
+  opacity: .2;
+
+
+  &:before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+   top:0;
+    left: calc(50% - 5px);
+  }
+
+
+}
+
+.card_flex{
+  opacity: .8;
+  display: flex;
+  justify-content: space-between;
+
+   &:first-child{
+     font-family: 'Jura';
+     font-size: 14px;
+     color: whitesmoke;
+
+   }
+
+
+
+  gap: 15px;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
 
 
 

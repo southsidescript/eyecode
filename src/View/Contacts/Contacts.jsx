@@ -30,14 +30,19 @@ const Contacts = () => {
             <div className={style.contacts_tme}>
                  <p>Оставить отзыв</p>
                  <Email placeholder="ваш отзыв"/>
-               
-
             </div>
 
             <div className={style.contacts_other}>
 
+                <div></div>
 
+                <div></div>
 
+                <div>
+                    <img src="./instagram.png" alt=""/>
+                    <img src="./github.png" alt=""/>
+                    <img src="./discord.png" alt=""/>
+                </div>
 
 
             </div>
