@@ -13,7 +13,7 @@ const Loading = (props) => (
 
 
     <Flex align="center" gap="middle">
-        <Spin   spinning={false}  size="large" fullscreen={true}  wrapperClassName={'spining'} tip={props.loadstate} />
+        <Spin   spinning={props.spin}  size="large" fullscreen={true}  wrapperClassName={'spining'} tip={props.loadstate} />
     </Flex>
 );
 export default Loading;

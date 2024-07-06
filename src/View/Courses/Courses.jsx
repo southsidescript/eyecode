@@ -1,82 +1,66 @@
-import {useEffect, useState} from "react";
-import style from  '../../global.module.scss';
-import Line from "../../Components/LineMap/Line";
-import parse from 'html-react-parser';
-import Course from "../../Components/Courses/Course";
-import '../../global.css';
-import {useInView} from "react-intersection-observer";
-import AboutInfo from "../AboutInfo/AboutInfo";
+import React, {useEffect, useState} from 'react';
+import ReactDOM from'react-dom';
+import style from '../../global.module.scss';
+import  {useInView} from  'react-intersection-observer';
+import CoursesCard  from  '../../Components/Courses/Course';
 
-
-
+import  {modules} from "../../Modules/module";
 
 const Courses = () => {
 
-    let elem= parse('<img src="./courses.png">');
-
-
-    const [viewState, setViewState] = useState(false);
 
 
 
-   //Line style
-    const lineStyle ={
-          theme: elem,
-          style:style.linemap_line_courses
+    const {ref,inView} = useInView({
 
-      }
+        threshold:0.5,
+
+    });
 
 
-   //Cards
-   const classicModule = {
-       title: 'Классический модуль',
-       description: 'Основы программирования',
-       style: style.courses_classic_module,
-       title_style:style.courses_classic_module_title,
-       image_style:style.courses_classic_module_image,
-       button_style:style.courses_classic_module_button,
-       image:'./Animacion.gif',
-   }
 
-    const reactModule = {
-        title: 'Реактивный модуль',
-        description: 'Основы программирования',
-        style: style.courses_react_module,
-        title_style:style.courses_react_module_title,
-        image_style:style.courses_react_module_image,
-        button_style:style.courses_react_module_button,
-        image:'./react_card.gif',
-    }
 
-    const eyePro = {
-        title: 'профессиональный модуль',
-        description: 'Основы программирования',
-        style:style.courses_eyepro_module,
-        title_style:style.courses_eyepro_module_title,
-        image_style:style.courses_eyepro_module_image,
-        button_style:style.courses_eyepro_module_button,
-        image:'./eyepro_card.jpeg',
-
-    }
 
 
 
     return(
-        <section  className={style.courses} >
 
-            <Line {...lineStyle}/>
+        <section className={style.courses}>
 
-             <Course  {...classicModule}    />
-             <Course {...reactModule} />
-             <Course {...eyePro}/>
-            {/*<section className={style.courses_aes}><img src="./courses_aes.jpeg"/></section>*/}
+        <div ref={ref} className={inView?style.courses_header:'hidden'}>
+
+          Модули в eye<span className={'code'}>code</span>
+
+        </div>
+
+
+            <section className={style.courses_content}>
+
+                <CoursesCard   {...modules[0]}/>
+                <CoursesCard   {...modules[1]}/>
+                <CoursesCard   {...modules[2]}/>
+
+            </section>
+
+
+
 
         </section>
+
+
+
+
+
+
 
 
     )
 
 
+
+
+
 }
+
 
 export default Courses;

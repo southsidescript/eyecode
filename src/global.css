@@ -6,8 +6,8 @@ html{
 
 body{
     margin: 0;
-    background-color: black;
-
+    background-color: #141415;
+    overflow-x: hidden;
 }
 
 
@@ -27,6 +27,7 @@ body{
 
 ul,li{
     list-style-type:none;
+    padding: 0;
 }
 
 a{
@@ -50,4 +51,55 @@ a{
     font-size: 12px;
 }
 
+
+
+.succesfuly_message{
+    color: green;
+}
+
+.class{
+    color: orange;
+}
+
+.error{
+    color: red;
+}
+
+.comment{
+    color: #03d544;
+}
+
+.code{
+    color: #64faec;
+}
+
+.headercons{
+
+    text-align: center;
+    font-family: 'Martian Mono', monospace;
+    font-size: 16px;
+}
+
+
+
+
+.choise_elements{
+        color: white;
+        opacity: 1 !important;
+        padding-bottom: 5px;
+        border-bottom: 2px solid white;
+}
+
+
+.import{
+
+    color: #ec83e7;
+}
+
+
+
+.center{
+   align-self: flex-end;
+
+}
 

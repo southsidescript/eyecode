@@ -1,9 +1,9 @@
 import Email from "../../Components/Email/Email";
 import style from '../../global.module.scss';
 import {useEffect, useState} from "react";
-import Line from "../../Components/LineMap/Line";
-import About from "../About/About";
 import Courses from "../Courses/Courses";
+import About from "../About/About";
+
 import Feedback from "../Feedbacks/Feedback";
 import Contacts from "../Contacts/Contacts";
 import Footer from "../Footer/Footer";
@@ -29,19 +29,19 @@ const Main = () =>{
                <section className={style.sectionheader}>{preview.map(n => n)} <span
                    className={style.question}>{preview.length < 19 ? '|' : '?'}</span></section>
                <Email placeholder={'Email address'}/>
-               <section className={style.maindesignelems}><img src="./Fray.jpeg" alt=""/></section>
+               <section className={style.maindesignelems}><img  src="./Fray.png" alt=""/></section>
                <section className={style.cooperate}>
                    Мы соотрудничаем:
                    <div className={style.main_logos}><img src="./logo_finam.png" alt=""/><img src="./reu.png" alt=""/>
                    </div>
                </section>
                <About/>
-               <Courses/>
-               <Feedback/>
+
+               {/*<Feedback/>*/}
 
 
            </main>
-
+           <Courses/>
            <Contacts/>
            <Footer/>
        </>

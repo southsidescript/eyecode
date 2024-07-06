@@ -12,7 +12,9 @@ const Header = () => {
         'Courses',
         'Contacts',
         'Feedbacks',
-        'FAQ'
+        'FAQ',
+        'Студентам'
+
     ])
 
 
@@ -21,14 +23,14 @@ const Header = () => {
         <header className={style.header}>
 
             <div className={style.logo}>
-                <img src="./eyelogov5.png" alt=""/>
+                <img src="./eyelogov6.png" alt=""/>
             </div>
 
             <nav className={style.nav}>
 
                 <ul>
                     {navList.map((n,index) => {
-                         return <li key={index}> <a href="#about">{n}</a></li>
+                         return <li key={index}> <a href={`#${n.toLowerCase()}`}>{n}</a></li>
                     })}
                 </ul>
             </nav>

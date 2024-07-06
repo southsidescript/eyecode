@@ -47,13 +47,14 @@ return(
           &#10006;
 
       </div>
+        <div className='headercons'>Заказать консультацию</div>
 
         <img src="./eyelogov6.png" alt=""/>
 
         <form action="">
         <input type='text' placeholder="Имя"/>
             <input type='text' placeholder="+7 (xxx) xxx-xx-xx"/>
-            Выберите способ связи:
+            Выберите тип консультации:
 
 
             <Space wrap>

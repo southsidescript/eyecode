@@ -14,10 +14,10 @@ const App = () => {
    const [ loadState,setLoadState] = useState([
        '1%','56%','99%','100%'
    ])
-
+    
     const [counter,setCounter] =useState(0)
-
-    const {loadVisible,setLoadVisible} = useState(false);
+    
+    const [loadVisible,setLoadVisible] = useState(true);;
 
     useEffect(() => {
 
@@ -36,7 +36,8 @@ const App = () => {
             setTimeout(() => {
                 setCounter(counter + 1)
                 setTimeout(() => {
-                    setCounter(counter + 2)
+                    setCounter(counter + 3)
+                    setLoadVisible(!loadVisible)
                 }, 1000)
             }, 1000)
 
@@ -45,8 +46,10 @@ const App = () => {
 
         return (<>
             <ContextConn>
+   
 
-                <Loading spin={loadVisible} loadstate={loadState[counter]}/>
+         
+              <Loading spin={loadVisible} loadstate={loadState[counter]}/>            
 
                 <Header/>
 

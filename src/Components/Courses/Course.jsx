@@ -8,8 +8,7 @@ import { Link } from 'react-router-dom'
 const Course = (props) => {
 
     const {ref,inView} = useInView({
-        threshold:0.5,
-        triggerOnce:true}
+        threshold:0.5,}
     );
 
 
@@ -17,14 +16,21 @@ const Course = (props) => {
 
 
     return(
-        <section ref={ref} className={inView ? props.style :'hidden' }>
-           <div className={props.image_style}>
-               <img src={props.image} alt=""/>
-           </div>
-            <div className={props.title_style}>{props.title}</div>
-            <div className={props.button_style}><Link to='/about'>Что я получу ?</Link></div>
 
-        </section>
+
+
+            <div  ref={ref} className={inView? props.style: 'hidden'}>
+                <div    className={props.headerStyle}> {props.title}</div>
+                <div    className={props.titleStyle}>{props.duration}</div>
+                <Link to={'./about'}>
+                    <button className={props.buttonStyle}> Что я получу ?</button>
+                </Link>
+
+
+            </div>
+
+
+
 
     )
 }
