@@ -7,13 +7,34 @@
 
  export function sendRequest(e,ref){
 
-let xhr = new XMLHttpRequest();
-    let token = '6576291190:AAF8e0X2OuXTktqLOR0UFcM54EnLNXgAJuM';
-    let userid = '688804750lf';
+
+    let token = '6809401772:AAFh2dQ9chGuFPISry7OXpNzJ8KtPaffk_I';
+    let userid = '688804750';
     let message = ref.current.value;
-    let url =`https://api.telegram.org/bot${token}/sendMessage?chat_id=${userid}&text=${message}`
+    let message_template = `Пользователь:${message}`
+    let url =`https://api.telegram.org/bot${token}/sendMessage?chat_id=${userid}&text=${message_template}`
+
+
+     if(message === '' || message.length < 3){
+         throw new Error('Введите сообщение')
+     }else{
+     return;
+     }
+     e.preventDefault();
+}
+
+
+
+export function  sendMessage(e,ref,url){
+
+    let xhr = new XMLHttpRequest();
     xhr.open('POST',url,true);
+
+
+
     xhr.send(null);
     e.preventDefault();
     ref.current.value = '';
+
+
 }

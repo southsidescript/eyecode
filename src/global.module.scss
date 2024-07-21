@@ -528,6 +528,7 @@
  animation: show 1s 1 ;
 
   &_tme {
+    font-size: 14px;
     width: 33%;
     background:linear-gradient(black,#24292e);
     border-radius: 25px 25px 0px 0px;
@@ -536,15 +537,30 @@
     display: flex;
     text-transform: uppercase;
     justify-content: center;
+    gap: 15px;
     flex-direction: column;
     align-items: center;
     color: white;
-    font-family: monospace;
+    font-family: "Martian Mono";
 
 
 
     & input {
       width: 15vw;
+    }
+
+    & label{
+      display: flex ;
+      flex-direction: row-reverse;
+      align-items: center;
+       & input{
+         width: 20px;
+       }
+
+      & span{
+        font-size: 10px;
+        width: 300px;
+      }
     }
 
     & input[type="submit"]{
@@ -556,12 +572,23 @@
 
       display: flex;
       flex-direction: column;
-      justify-content:flex-end;
+      justify-content:center;
       align-items: center;
       width: 33%;
       height: 90vh;
       
+   & nav{
+     font-family: "Jura";
+     font-size: 16px;
 
+
+      & ul{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+   }
 
 
 
@@ -1076,6 +1103,102 @@
 
 
 
+.edumode{
+
+  width: 800px;
+  height: 600px;
+  border-radius: 15px;
+
+}
+
+.message_confirm{
+  animation: consult 1s 1 ;
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  left: calc(50% - 250px);
+  top: calc(50% - 200px);
+  border-radius: 15px;
+  background-image:linear-gradient(40deg, black, #343434);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+
+  font-family: 'Martian Mono';
+  font-size: 14px;
+
+  & h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Martian Mono';
+    gap: 15px;
+
+     & img{
+       filter: drop-shadow(0px 0px 5px white);
+     }
+  }
+
+
+  &_email{
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid blue;
+    border-radius:10px;
+    background: none;
+    color: white;
+    &::placeholder{
+      font-size: 12px;
+      text-align: center;
+    }
+
+
+  }
+
+  &_btn{
+    background: none;
+    outline: none;
+    border: none;
+  transition: all .2s ease;
+    cursor: pointer;
+  &:hover{
+    transform: translateX(15px);
+  }
+  }
+
+  &_msg{
+    overflow: hidden;
+    width: 90%;
+    padding: 5%;
+    height: 40%;
+    border-radius:15px;
+    box-shadow: 0px 0px 5px whitesmoke;
+   backdrop-filter: blur(10px);
+  }
+
+
+  &_form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+
+
+
+
+
+}
+
+
+
 
 @keyframes blink {
 
@@ -1153,4 +1276,7 @@
   0%{opacity: 0}
   100%{opacity: 1}
 }
+
+
+
 

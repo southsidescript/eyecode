@@ -66,10 +66,10 @@ const AboutInfoCard = (props) => {
 
 
 
-            <div className={props.footer}>
-               <button>{props.price}</button>
-            </div>
-        </div>
+                    <div className={props.footer}>
+                          <button>{props.price}</button>
+                    </div>
+           </div>
     )
 }
 

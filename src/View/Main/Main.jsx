@@ -28,7 +28,7 @@ const Main = () =>{
            <main className={style.main}>
                <section className={style.sectionheader}>{preview.map(n => n)} <span
                    className={style.question}>{preview.length < 19 ? '|' : '?'}</span></section>
-               <Email placeholder={'Email address'}/>
+               <Email placeholder={'Ваш вопрос'}/>
                <section className={style.maindesignelems}><img  src="./Fray.png" alt=""/></section>
                <section className={style.cooperate}>
                    Мы соотрудничаем:
@@ -42,8 +42,8 @@ const Main = () =>{
 
            </main>
            <Courses/>
-           <Contacts/>
-           <Footer/>
+
+
        </>
 
 

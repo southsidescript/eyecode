@@ -12,9 +12,7 @@ const Header = () => {
         'Courses',
         'Contacts',
         'Feedbacks',
-        'FAQ',
-        'Студентам'
-
+        'FAQ'
     ])
 
 

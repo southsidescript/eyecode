@@ -32,31 +32,39 @@ return(
       <span className='import'>import </span> ClassicModule from 'classic-module'; <br/>
       <span className='import'>import </span> React from 'react-module';
 
-      ;<br/> <div className={'code'}  ref={ref}>   // EyeCode - это новый взгляд обучению IT-профессиям.
+
+      ;<br/>
+      <div className={'code'} ref={ref}> // EyeCode - это новый взгляд на будущее IT - мира.
           <br/>
           <br/>
           Меня зовут Серкан Зохрабов - автор курсов EyeCode.
-         <br/>В чем особенность подхода к обучению ?
+          <br/>В чем особенность подхода к обучению ?
           <br/>
-          > Дело в том что в IT мире технологии и знания со временем теряют актуальность.<br/>
-          Наша команда буквально 24/7 отслеживает изменения рынка и учитывает ее потребности к специалистам. <br/>
-          Также все студенты получают к закрытому <span className='class'>телеграм каналу</span>  в котором ежедневно:Публикуются актуальные
-          новости ,полезные материалы,задания. <br/>
+          >
+          IT-мир очень быстро меняется.Мы не успели привыкнуть как быстро рождаются новые фреймворки а тут нас атакует
+          исскуственный интелект.
+          Многие впали в отчаяние.Youtube заразился контентом 'ИИ ЗАМЕНИТ ТЕБЯ'.
+          Наша цель приручить ИИ и использовать его для решения наших задач.
+          EyeCode имеет уникальный подход к обучению.
+          В начале обучения вы выбираете стиль обучения. <br/>
+          <span className='class'>GameMode Learning</span> <br/>
+          <span className='blue'> SoftwareMode Learning </span> <br/>
+          GameMode Learning - это стиль обучения через создания простых игр тем самым осваивая новые знания.
+          SoftwareMode Learning - это стиль обучения через создания лендингов/сайтов/ тем самым осваивая новые знания.
+
+          <br/>
           <br/>
           <span className='succesfuly_message'>acquaintance completed successfully</span>
 
-         <div className={'success_matrix'}>
+          <div className={'success_matrix'}>
 
 
-         </div>
+          </div>
 
       </div>
 
 
-
-
   </Codeblock>
-
 
 
             <div className={style.about_support_window}>

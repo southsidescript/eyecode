@@ -49,7 +49,7 @@ const AboutInfo = () => {
 
 
             </section>
-            )
+            
         </>)
 
 }

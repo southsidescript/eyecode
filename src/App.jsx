@@ -7,6 +7,8 @@ import './global.css';
 import ContextConn from "./Context/Context";
 import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
 import AboutInfo from "./View/AboutInfo/AboutInfo";
+import Contacts from "./View/Contacts/Contacts";
+import Footer from "./View/Footer/Footer";
 
 
 
@@ -60,8 +62,8 @@ const App = () => {
                    </Routes>
                </BrowserRouter>
 
-
-
+                <Contacts/>
+                <Footer/>
             </ContextConn>
 
         </>);
