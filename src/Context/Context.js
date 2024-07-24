@@ -8,6 +8,7 @@ export const Context = createContext();
 
 
 
+
 const ContextConn = ({children}) => {
 
  const [theme,setTheme] = useState([
@@ -16,14 +17,14 @@ const ContextConn = ({children}) => {
  ])
 
 
-
     const [consultWindowVisible,setConsultWindowVisible] = useState(false)
 
-    console.log(theme,consultWindowVisible)
+    const [messageConfirm ,setMessageConfirmation] = useState(false);
+
 
 
     return(
-        <Context.Provider value={{theme,consultWindowVisible,setConsultWindowVisible}}>{children}</Context.Provider>
+        <Context.Provider value={{theme,consultWindowVisible,setConsultWindowVisible,messageConfirm,setMessageConfirmation}}>{children}</Context.Provider>
     )
 
 

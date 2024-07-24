@@ -3,13 +3,18 @@ import {sendRequest} from "../../bot/bot";
 import {useEffect, useRef, useState} from "react";
 import style from '../../global.module.scss';
 import MessageConfirm from "../MessageConfirm/MessageConfirm";
+import { useContext } from "react";
+import Context from '../../Context/Context'
 
 
 const Email = (props) => {
 
 
 
-    const [valid,setValid] = useState(false);
+
+   console.log(Context)
+
+
 
     const ref= useRef();
 
@@ -38,14 +43,14 @@ const Email = (props) => {
 
                     }else{
                         setMsg(ref.current.value)
-                        setValid(current => true)
+                       setConfirmMessage(true);
                     }
 
 
             }} value={'Отправить'} type="submit"/>
             </form>
 
-    <MessageConfirm   visible={valid?style.message_confirm:'none'}  />
+    <MessageConfirm  refInfo={ref}  msg={msg} visible={confirmMessage ?style.message_confirm:'none'}  />
 
 
 

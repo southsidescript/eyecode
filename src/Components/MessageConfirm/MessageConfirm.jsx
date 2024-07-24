@@ -2,10 +2,16 @@ import React from'react';
 import style from '../../global.module.scss';
 import {useRef} from "react";
 import {sendRequest} from "../../bot/bot";
- const MessageConfirm = (props) => {
+
+
+
+
+
+const MessageConfirm = (props) => {
 
 
      const ref = useRef();
+
 
 
 
@@ -16,21 +22,25 @@ import {sendRequest} from "../../bot/bot";
 
 
 
-            <div className={style.message_confirm_form} aria-rowcount={15} ref={ref}>
-                <input type="text" className={style.message_confirm_email}
+            <div className={style.message_confirm_form}>
+                <input  ref={ref} type="text" className={style.message_confirm_email}
+
                        placeholder={'Ваша электронная почта либо t.me'}/>
 
-                <button className={style.message_confirm_btn} onClick={()=>{
+                <button className={style.message_confirm_btn} onClick={(e)=>{
 
+
+                sendRequest(e,props.refInfo,props.msg,ref.current.value);
 
 
                 }}>
+
                     <img src="./send.png" alt=""/>
                 </button>
 
 
             </div>
-git
+
 
         </div>
 
