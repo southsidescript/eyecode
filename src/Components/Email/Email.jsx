@@ -4,17 +4,19 @@ import {useEffect, useRef, useState} from "react";
 import style from '../../global.module.scss';
 import MessageConfirm from "../MessageConfirm/MessageConfirm";
 import { useContext } from "react";
-import Context from '../../Context/Context'
+import {Context} from '../../Context/Context'
 
 
 const Email = (props) => {
 
 
 
+    const theme = useContext(Context);
 
-   console.log(Context)
+    const {messageConfirm,setMessageConfirmation} = theme;
 
 
+    console.log(messageConfirm)
 
     const ref= useRef();
 
@@ -43,14 +45,14 @@ const Email = (props) => {
 
                     }else{
                         setMsg(ref.current.value)
-                       setConfirmMessage(true);
+                        setMessageConfirmation(true);
                     }
 
 
             }} value={'Отправить'} type="submit"/>
             </form>
 
-    <MessageConfirm  refInfo={ref}  msg={msg} visible={confirmMessage ?style.message_confirm:'none'}  />
+    <MessageConfirm  refInfo={ref}  msg={msg} visible={ messageConfirm ? style.message_confirm:'none'}  />
 
 
 

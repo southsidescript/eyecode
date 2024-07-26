@@ -42,11 +42,11 @@ const AboutInfo = () => {
                 <AboutInfoCard  {...modules[4]}/>
                 <AboutInfoCard  {...modules[5]} />
 
-
+                <Link to='/'>
                 <button className={style.about_info_button}>
-                    <Link to='/'>Назад</Link>
+                    Назад
                 </button>
-
+                </Link>
 
             </section>
             

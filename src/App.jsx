@@ -53,9 +53,10 @@ const App = () => {
          
               <Loading spin={loadVisible} loadstate={loadState[counter]}/>            
 
-                <Header/>
+
 
                <BrowserRouter>
+                   <Header/>
                    <Routes>
                        <Route path="/" element={<Main/>} />
                        <Route path="/about" element={<AboutInfo/>} />

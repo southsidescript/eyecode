@@ -1,13 +1,21 @@
 import Email from "../../Components/Email/Email";
 import style from '../../global.module.scss';
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import Courses from "../Courses/Courses";
 import About from "../About/About";
 
 import Feedback from "../Feedbacks/Feedback";
 import Contacts from "../Contacts/Contacts";
 import Footer from "../Footer/Footer";
+import Context from "../../Context/Context";
+
+
+
 const Main = () =>{
+
+
+
+
 
     const  [preview,setPreview] = useState(['']);
     const assets = ['Ч','т','о',' ','в','а','с',' ','и','н','т','е','р','е','с','у','е','т'];
