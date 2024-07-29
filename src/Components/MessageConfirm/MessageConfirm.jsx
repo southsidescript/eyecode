@@ -36,7 +36,7 @@ const MessageConfirm = (props) => {
     const ref = useRef();
 
     let refInfo = localStorage.getItem('email');
-
+   console.log(refInfo);
 
     return(
 
