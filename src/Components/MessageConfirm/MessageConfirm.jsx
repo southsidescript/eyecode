@@ -46,8 +46,6 @@ const MessageConfirm = (props) => {
             <h3><img src="./github_social.png" alt=""/> Куда вам выслать ответ ?</h3>
 
 
-
-
             <div className={style.message_confirm_form}>
                 <input  ref={ref} type="text" className={style.message_confirm_email}
 

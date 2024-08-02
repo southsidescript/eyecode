@@ -3,7 +3,7 @@ import style from "../global.module.scss";
 
 
 
-function parser(elems){
+export function parser(elems){
     let result = elems.map(n=> <li className={style.material_info} key={n}>{n}</li>);
     return result;
 

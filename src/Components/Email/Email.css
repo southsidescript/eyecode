@@ -7,7 +7,7 @@
     margin: 0;
     border: none;
     border-radius: 10px 0px 0px 10px;
-   outline: none;
+    outline: none;
 }
 
 
@@ -41,3 +41,21 @@ outline: none;
     transition: all .2s ease-out;
 }
 
+
+
+@media only screen and (max-width: 600px) {
+
+
+    .email-text{
+        width: 200px;
+        height: 40px;
+    }
+
+    .email-submit{
+        width: 100px;
+        height: 41px;
+        font-size: 12px;
+
+    }
+
+}

@@ -10,7 +10,7 @@
 .header{
   height: 150px;
   width: 100vw;
-  background-color: #141415;
+  background-color:#141415;
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -251,7 +251,7 @@
   position: absolute;
   right:0px;
   top: 50%;
-
+  z-index: -100;
    & img{
      width: 368px;
      height: 698px;
@@ -1276,6 +1276,32 @@
   0%{opacity: 0}
   100%{opacity: 1}
 }
+
+
+@media screen and (max-width: 1200px) {
+
+  .maindesignelems{
+    opacity: .3;
+  }
+
+}
+
+@media screen and (max-width:720px){
+ 
+  .sectionheader{
+    font-size: 44px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
 
 
 

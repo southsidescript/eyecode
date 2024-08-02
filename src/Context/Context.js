@@ -16,6 +16,8 @@ const ContextConn = ({children}) => {
       light:'light'}
  ])
 
+    const [mobilemode,setMobilemode] = useState(false);
+
 
     const [consultWindowVisible,setConsultWindowVisible] = useState(false)
 
@@ -24,7 +26,7 @@ const ContextConn = ({children}) => {
 
 
     return(
-        <Context.Provider value={{theme,consultWindowVisible,setConsultWindowVisible,messageConfirm,setMessageConfirmation}}>{children}</Context.Provider>
+        <Context.Provider value={{mobilemode,setMobilemode,theme,consultWindowVisible,setConsultWindowVisible,messageConfirm,setMessageConfirmation}}>{children}</Context.Provider>
     )
 
 
